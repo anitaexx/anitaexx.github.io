@@ -53,12 +53,11 @@ I use **SQL, Python, Power BI, and Excel** to turn complex data into clear, acti
 ## 🔗 Connect With Me
 
 - **LinkedIn:** https://www.linkedin.com/in/anita-eimi/
-- **GitHub:** https://github.com/anitaexx
 - **HackerRank:** https://www.hackerrank.com/profile/eimiakhenaa
 
 📫 Email: emilomon@yahoo.com
 
 ---
 
-⭐ If you’re reviewing my profile from my resume — start with the pinned projects below.
+⭐ If you’re reviewing my profile from my resume, start with the pinned projects below.
 
