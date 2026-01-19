@@ -95,8 +95,8 @@
   <h2>Project Overview</h2>
   <p>
     This project models a utility billing system in Microsoft SQL Server to analyze customer behavior, billing accuracy,
-    revenue leakage, and compliance risks. Interactive Power BI dashboards
-    built for analytics and operations teams.
+    revenue leakage, compliance risks and most importantly reimbursments owed from TDU (Transmission and Distirbution Utility) charged on specil care customers who do not pay their bills. 
+    In addition interactive Power BI dashboards have been built for analytics and operations teams.
   </p>
 
 <h2>Data Model</h2>
@@ -135,7 +135,7 @@
 
   <div class="business-question">
     <strong>3. Same Customer, Multiple Accounts:</strong>  
-    Find customers who have multiple accounts (Residential + Small Commercial) under their name.
+    Find Residential Customers who have multiple accounts under their CutomerID.
    </div>
   <div class="visual">
     <img src="../assets/images/multiple-accounts-flag.png" alt="Multiple Accounts Flag">
@@ -143,8 +143,8 @@
 
   <div class="business-question">
     <strong>4. Refund Abuse:</strong>  
-    Identify customers where total Refund amount exceeds total Payment amount within a month.  
-    Detect cases where a Refund was issued without a corresponding Bill.
+    Identify customers where total Refund amount exceeds total Payments, and vizualize Total Payments Vs Refund monthly.  
+    Detect cases where a Refund was issued without any Payments, this is fraud.
   </div>
   <div class="visual">
     <img src="../assets/images/refund-audit.png" alt="Refund Abuse Analysis">
@@ -159,33 +159,24 @@
   </div>
 
     <div class="business-question">
-    <strong>DAX snippett, TDU paid or refunded :</strong>  
-    Identify Critical Care Residential customers who were ever charged a Late Fee (should ideally have no service interruptions).
+    <strong>DAX snippett 1, Late Fees :</strong>  
+    First we calculate transactions (payments and refunds), variance = late fees
   </div>
     <div class="visual">
-    <img src="../assets/images/late-fee-to-waive.png" alt="Refund Abuse Analysis">
+    <img src="../assets/images/dax-snippett-1.png" alt="Refund Abuse Analysis">
   </div>
 
     <div class="business-question">
-    <strong>5. Critical Care Compliance:</strong>  
+    <strong>DAX snippett 2, TDU Varaiance = Late Fees :</strong>  
     Identify Critical Care Residential customers who were ever charged a Late Fee (should ideally have no service interruptions).
   </div>
     <div class="visual">
-    <img src="../assets/images/late-fee-to-waive.png" alt="Refund Abuse Analysis">
+    <img src="../assets/images/dax-snippett-2.png" alt="Refund Abuse Analysis">
   </div>
-
-    <div class="business-question">
-    <strong>5. Critical Care Compliance:</strong>  
-    Identify Critical Care Residential customers who were ever charged a Late Fee (should ideally have no service interruptions).
-  </div>
-    <div class="visual">
-    <img src="../assets/images/late-fee-to-waive.png" alt="Refund Abuse Analysis">
-  </div>
-  
 
   <div class="business-question">
-    <strong>You can find the source code including all other answered business questions 
-    in the repository **UtilityCompanyAnalysis @ https://github.com/anitaexx </strong>  
+    <strong>You can find the source code and all other answered business questions 
+    in the repository **UtilityCompanyAnalysis</strong>  
   </div>
 
   
