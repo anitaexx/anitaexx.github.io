@@ -50,14 +50,6 @@
       border: none;
     }
 
-    pre {
-      background: #f3f4f6;
-      padding: 16px;
-      border-radius: 8px;
-      overflow-x: auto;
-      font-size: 0.9rem;
-    }
-
     .visual {
       margin: 25px 0;
     }
@@ -70,6 +62,14 @@
 
     ul {
       padding-left: 20px;
+    }
+
+    .business-question {
+      background: #f3f4f6;
+      padding: 16px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 0.95rem;
     }
   </style>
 </head>
@@ -86,7 +86,7 @@
   <!-- VIDEO -->
   <div class="video">
     <iframe
-      src="https://www.youtube.com/embed/-0CnlDRNCiw"
+      src="https://www.youtube.com/embed/"
       title="Utility Billing Project Walkthrough"
       allowfullscreen>
     </iframe>
@@ -100,88 +100,72 @@
     surface actionable insights for analytics and operations teams.
   </p>
 
-  <h2>Data Model</h2>
+<h2>Data Model</h2>
+<p>This project uses a <strong>star schema</strong> in Microsoft SQL Server to organize utility billing data.</p>
+
   <ul>
-    <li><strong>FactUsage</strong> (fact table)</li>
-    <li>DimCustomers</li>
-    <li>DimAccounts</li>
-    <li>DimTransactionType</li>
-    <li>DimDate</li>
+  <li>DimCustomers</li>
+  <li>DimAccounts</li>
+  <li>DimTransactionType</li>
+  <li>DimDate</li>
+  <li>FactUsage (Fact Table)</li>
   </ul>
 
-  <!-- POWER BI VISUAL -->
+<div class="visual">
+  <img src="../assets/images/star-schema-screengrab.png" alt="Star Schema Diagram">
+</div>
+
+
+  <h2>Key Business Questions & Analyses</h2>
+
+  <div class="business-question">
+    <strong>1. Data Inconsistencies:</strong>  
+    Flag customers marked as Residential in DimCustomer but whose accounts are Commercial or Small Commercial in DimAccount.
+  </div>
   <div class="visual">
-    <img src="../assets/images/star-schema.png" alt="Star Schema Diagram">
+    <img src="../assets/images/data-inconsistency.png" alt="Customer Account Mismatch Report">
   </div>
 
-  <h2>Key Analytical Scenarios</h2>
-
-  <h3>1. Customer & Account Data Inconsistencies</h3>
-  <pre>
-SELECT c.CustomerID, c.CustomerType, a.AccountType
-FROM DimCustomers c
-JOIN DimAccounts a ON c.CustomerID = a.CustomerID
-WHERE c.CustomerType = 'Residential'
-AND a.AccountType IN ('Commercial', 'Small Commercial');
-  </pre>
-
+  <div class="business-question">
+    <strong>2. Inactive Accounts With Recent Activity:</strong>  
+    Identify accounts marked as AccountStatus = 'Inactive' but still showing usage transactions.
+  </div>
   <div class="visual">
-    <img src="../assets/images/data-inconsistency-report.png" alt="Customer Account Mismatch Report">
+    <img src="../assets/images/inactive-usage.png" alt="Inactive Accounts with Usage">
   </div>
 
-  <h3>2. Inactive Accounts With Usage</h3>
-  <pre>
-SELECT a.AccountID, a.AccountStatus, SUM(f.UsageAmount) AS TotalUsage
-FROM FactUsage f
-JOIN DimAccounts a ON f.AccountID = a.AccountID
-WHERE a.AccountStatus = 'Inactive'
-GROUP BY a.AccountID, a.AccountStatus
-HAVING SUM(f.UsageAmount) > 0;
-  </pre>
+  <div class="business-question">
+    <strong>3. Same Customer, Multiple Accounts:</strong>  
+    Find customers who have multiple accounts (Residential + Small Commercial) under their name.
+  <div class="visual">
+    <img src="../assets/images/multiple-accounts-flag.png" alt="Multiple Accounts Flag">
+  </div>
 
-  <h3>3. Refund Abuse Detection</h3>
-  <pre>
-SELECT CustomerID, MONTH(TransactionDate) AS Month,
-       SUM(CASE WHEN TransactionType = 'Refund' THEN Amount ELSE 0 END) AS Refunds,
-       SUM(CASE WHEN TransactionType = 'Payment' THEN Amount ELSE 0 END) AS Payments
-FROM FactUsage
-GROUP BY CustomerID, MONTH(TransactionDate)
-HAVING SUM(CASE WHEN TransactionType = 'Refund' THEN Amount ELSE 0 END)
-     > SUM(CASE WHEN TransactionType = 'Payment' THEN Amount ELSE 0 END);
-  </pre>
+  <div class="business-question">
+    <strong>4. Shared Service Addresses:</strong>  
+    Detect all customers sharing the same service address across multiple accounts.
+  </div>
 
+  <div class="business-question">
+    <strong>5. Refund Abuse:</strong>  
+    Identify customers where total Refund amount exceeds total Payment amount within a month.  
+    Detect cases where a Refund was issued without a corresponding Bill.
+  </div>
   <div class="visual">
     <img src="../assets/images/refund-analysis.png" alt="Refund Abuse Analysis">
   </div>
 
-  <h3>4. High Outstanding Balances</h3>
-  <pre>
-SELECT CustomerID,
-       SUM(Billed) - SUM(Payments) - SUM(Refunds) + SUM(LateFees) AS OutstandingBalance
-FROM FactUsage
-GROUP BY CustomerID
-HAVING SUM(Billed) - SUM(Payments) - SUM(Refunds) + SUM(LateFees) > 1000;
-  </pre>
-
-  <h3>5. Aging Report (30 / 60 / 90 / 90+)</h3>
-  <pre>
-CASE
-  WHEN DATEDIFF(day, BillDate, GETDATE()) <= 30 THEN '0-30'
-  WHEN DATEDIFF(day, BillDate, GETDATE()) <= 60 THEN '31-60'
-  WHEN DATEDIFF(day, BillDate, GETDATE()) <= 90 THEN '61-90'
-  ELSE '90+'
-END AS AgingBucket
-  </pre>
-
-  <div class="visual">
-    <img src="../assets/images/aging-report.png" alt="Aging Report Power BI">
+  <div class="business-question">
+    <strong>6. High Outstanding Balances:</strong>  
+    Calculate total Billed – total Payments – total Refunds + total Late Fees for each customer and flag balances above $1000.
   </div>
 
-  <h3>6. Critical Care Compliance</h3>
-  <pre>
-SELECT c.CustomerID, f.LateFeeAmount
-FROM FactUsage f
-JOIN DimCustomers c ON f.CustomerID = c.CustomerID
-WHERE c.CriticalCareFlag = 'Yes'
-AND f.LateFeeAmount
+  <div class="business-question">
+    <strong>8. Critical Care Compliance:</strong>  
+    Identify Critical Care Residential customers who were ever charged a Late Fee (should ideally have no service interruptions).
+  </div>
 
+
+</div>
+</body>
+</html>
