@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Certifications</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #ffffff;
+      color: #111827;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      margin-top: 40px;
+      font-size: 1.05rem;
+      color: #374151;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .visual {
+      margin: 16px 0 32px;
+    }
+
+    .visual img {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    nav a:hover {
+      color: #111827;
+      border-bottom: 2px solid #111827;
+      padding-bottom: 2px;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header style="background:#fafafa; border-bottom:1px solid #e5e7eb;">
+  <div style="
+    max-width:1100px;
+    margin:auto;
+    padding:18px 20px;
+    display:flex;
+    justify-content:flex-end;
+  ">
+    <nav style="display:flex; gap:28px; font-size:0.95rem;">
+      <a href="index.html" style="text-decoration:none; color:#374151;">Home</a>
+      <a href="projects/utility-billing.html" style="text-decoration:none; color:#374151;">Projects</a>
+      <a href="certifications.html" style="text-decoration:none; color:#374151;">Certifications</a>
+    </nav>
+  </div>
+</header>
+
+<!-- CONTENT -->
+<div class="container">
+
+  <h2>Certifications</h2>
+  <p>
+    The following certifications demonstrate applied knowledge in data analytics,
+    business intelligence, and process improvement.
+  </p>
+
+  <ul>
+    <li>
+      <strong>Microsoft Certified: Power BI Data Analyst Associate (PL-300)</strong>
+      <div class="visual">
+        <img src="assets/images/powerbi-cert.png" alt="Power BI Data Analyst Associate Certificate">
+      </div>
+    </li>
+
+    <li>
+      <strong>Certified Analytics & Measurement Professional (CAMP)</strong>
+      <div class="visual">
+        <img src="assets/images/camp-cert.png" alt="CAMP Certification">
+      </div>
+    </li>
+  </ul>
+
+  <h3>In View</h3>
+  <ul>
+    <li>Six Sigma Yellow Belt</li>
+    <li>Tableau Data Analyst Associate</li>
+  </ul>
+
+</div>
+
+<footer style="
+  background:#f9fafb;
+  border-top:1px solid #e5e7eb;
+  margin-top:80px;
+">
+  <div style="
+    max-width:1100px;
+    margin:auto;
+    padding:32px 20px;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    text-align:center;
+    font-size:0.85rem;
+    color:#6b7280;
+  ">
+    <div style="font-weight:500; color:#374151;">
+      Data Analytics · Business Intelligence
+    </div>
+    <div>
+      © 2026 Anita Eimiakhena
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
