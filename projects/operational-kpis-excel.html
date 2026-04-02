@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Title</title>
+  <title>Service and Sales Order Analysis</title>
 
   <style>
     body {
@@ -38,18 +38,6 @@
       padding-bottom: 6px;
     }
 
-    .video {
-      aspect-ratio: 16 / 9;
-      margin-bottom: 40px;
-    }
-
-    iframe {
-      width: 100%;
-      height: 100%;
-      border-radius: 10px;
-      border: none;
-    }
-
     .visual {
       margin: 25px 0;
     }
@@ -73,22 +61,16 @@
     }
   </style>
 </head>
-<header style="
-  background:#f9fafb;
-  border-bottom:1px solid #e5e7eb;
-">
-  <div style="
-    max-width:1100px;
-    margin:auto;
-    padding:18px 20px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-  ">
+
+<body>
+
+<!-- Header -->
+<header style="background:#f9fafb; border-bottom:1px solid #e5e7eb;">
+  <div style="max-width:1100px; margin:auto; padding:18px 20px; display:flex; justify-content:space-between; align-items:center;">
 
     <div style="font-weight:700; font-size:1.1rem;">
       <a href="../index.html" style="text-decoration:none; color:#111827;">
-        
+        Anita Simpson
       </a>
     </div>
 
@@ -99,11 +81,11 @@
 
   </div>
 </header>
-<body>
 
 <div class="container">
 
-  <h1>Serivce and Sales Order Data Analyis for Operational Excellence</h1>
+  <h1>Service and Sales Order Data Analysis for Operational Excellence</h1>
+
   <div class="meta">
     Excel · KPIs · Dashboard · Pivot Tables · Advanced Formulas
   </div>
@@ -115,129 +97,100 @@
     demand through an executive dashboard designed for leadership visibility.
   </p>
 
-<h2>Data Model</h2>
-<p>This project has two datasets (tables) <strong>Repair History 2024/25</strong> and <strong>Sales Orders 2024/25</strong>.</p>
-<p>There are four sheet supporting this analysis </p>
-  
+  <h2>Data Model</h2>
+
+  <p>
+    This project uses two datasets (tables): <strong>Repair History 2024/25</strong> and <strong>Sales Orders 2024/25</strong>.
+  </p>
+
+  <p>There are four supporting sheets in this analysis:</p>
+
   <ul>
-  <li>Repair History KPIs</li>
-  <li>Sales Orders KPIs</li>
-  <li>Dashboard</li>
-  <li>Device Level Analysis</li>
+    <li>Repair History KPIs</li>
+    <li>Sales Orders KPIs</li>
+    <li>Dashboard</li>
+    <li>Device Level Analysis</li>
   </ul>
 
   <div class="visual">
-  <img src="../assets/images/allsheets.png" alt="Star Schema Diagram">
-</div>
-  
-<p>Helper columns for Repair History 2024/25, created with advanced formulas.</p
+    <img src="../assets/images/allsheets.png" alt="Workbook Structure">
+  </div>
 
-<div class="visual">
-  <img src="../assets/images/helpercols.png" alt="Star Schema Diagram">
-</div>
+  <p>
+    Helper columns for Repair History 2024/25 were created using advanced formulas.
+  </p>
 
-  <p>Linked the two tables with Service Call Number (SC000000) and included helper columns for Sales Orders 2024/25, created with advanced formulas.</p
-                                                                                              
   <div class="visual">
-  <img src="../assets/images/linked-helpercols.png" alt="Star Schema Diagram">
-</div>
+    <img src="../assets/images/helpercols.png" alt="Repair Helper Columns">
+  </div>
+
+  <p>
+    The two datasets were linked using the Service Call Number (SC000000), with additional helper columns created for Sales Orders.
+  </p>
+
+  <div class="visual">
+    <img src="../assets/images/linked-helpercols.png" alt="Linked Tables">
+  </div>
 
   <h2>Key Repair History KPIs</h2>
 
   <div class="business-question">
-    <strong>1. Total Service Calls per Quarter:</strong>  
-    This company sells devices and handpieces. 
-    When a customer or client calls to report an issue with a device, the technical support representative 
-    determines the nature of the problem and creates a service call.
+    <strong>1. Total Service Calls per Quarter:</strong><br>
+    When a customer reports an issue with a device or handpiece, a service call is created after technical assessment.
   </div>
+
   <div class="visual">
-    <img src="../assets/images/callvolume.png" alt="Customer Account Mismatch">
+    <img src="../assets/images/callvolume.png" alt="Service Call Volume">
   </div>
 
   <div class="business-question">
-    <strong>2. Total Service Calls by Malfunction:</strong>  
-This company sells devices and handpieces. Whenever a service call is created, the technical support representative
-determines the exact malfunction and records it in the ERP system by selecting it from a predefined list.</div>
+    <strong>2. Total Service Calls by Malfunction:</strong><br>
+    Each service call includes a categorized malfunction selected from a predefined ERP list.
+  </div>
+
   <div class="visual">
-    <img src="../assets/images/mallcallvolume.png" alt="Inactive Accounts with Usage">
+    <img src="../assets/images/mallcallvolume.png" alt="Malfunction Analysis">
   </div>
 
   <div class="business-question">
-    <strong>3. Individual KPIs and Quality Audit:</strong>  
-    Here, the Operations Manager can determine who is creating the most service calls (the names have been blanked, as this is real data with real names). 
-    The Operations Manager can also see the quality of the calls being created. In this screenshot, we see that there are <strong>984/2001</strong>
-    service calls where the technical team have not described the repairs they have carried out. </div>
+    <strong>3. Individual KPIs and Quality Audit:</strong><br>
+    This highlights technician activity and data quality. In this dataset, <strong>984 out of 2001</strong> service calls lack repair descriptions.
+  </div>
+
   <div class="visual">
-    <img src="../assets/images/opskpis.png" alt="Multiple Accounts Flag">
+    <img src="../assets/images/opskpis.png" alt="Operations KPIs">
   </div>
 
   <div class="business-question">
-    <strong>3. % of Total Service Calls by Repair Category:</strong>  
-  Repair Category is a helper column. There is a screenshot below to show this.
-  Th second screenshot highlights the risk of improper data entry, as nearly 50% of the repairs are undocumented.
+    <strong>4. % of Total Service Calls by Repair Category:</strong><br>
+    Repair Category is derived from helper columns. Nearly 50% of repairs are undocumented, highlighting data entry risks.
   </div>
+
   <div class="visual">
-    <img src="../assets/images/helperrc.png" alt="Refund Abuse Analysis">
+    <img src="../assets/images/helperrc.png" alt="Repair Category Logic">
   </div>
-   <div class="visual">
-    <img src="../assets/images/50undocrepairs.png" alt="Refund Abuse Analysis">
+
+  <div class="visual">
+    <img src="../assets/images/50undocrepairs.png" alt="Undocumented Repairs">
   </div>
 
   <div class="business-question">
-    <strong>5. Critical Care Compliance:</strong>  
-    Identify Critical Care Residential customers who were ever charged a Late Fee (should ideally have no service interruptions).
+    <strong>
+      Full source code and analysis are available in the repository: UtilityCompanyAnalysis
+    </strong>
   </div>
-    <div class="visual">
-    <img src="../assets/images/late-fee-to-waive.png" alt="Refund Abuse Analysis">
-  </div>
-
-    <div class="business-question">
-    <strong>DAX snippett 1, Late Fees :</strong>  
-    First we calculate transactions (payments and refunds), variance = late fees
-  </div>
-    <div class="visual">
-    <img src="../assets/images/dax-snippett-1.png" alt="Refund Abuse Analysis">
-  </div>
-
-    <div class="business-question">
-    <strong>DAX snippett 2, TDU Varaiance = Late Fees :</strong>  
-    Identify Critical Care Residential customers who were ever charged a Late Fee (should ideally have no service interruptions).
-  </div>
-    <div class="visual">
-    <img src="../assets/images/dax-snippett-2.png" alt="Refund Abuse Analysis">
-  </div>
-
-  <div class="business-question">
-    <strong>You can find the source code and all other answered business questions 
-    in the repository **UtilityCompanyAnalysis</strong>  
-  </div>
-
-  
 
 </div>
-</body>
-  <footer style="
-  background:#f9fafb;
-  border-top:1px solid #e5e7eb;
-  margin-top:80px;
-">
-  <div style="
-    max-width:1100px;
-    margin:auto;
-    padding:32px 20px;
-    display:flex;
-    flex-direction:column;
-    gap:8px;
-    text-align:center;
-    font-size:0.85rem;
-    color:#6b7280;
-  ">
+
+<!-- Footer -->
+<footer style="background:#f9fafb; border-top:1px solid #e5e7eb; margin-top:80px;">
+  <div style="max-width:1100px; margin:auto; padding:32px 20px; text-align:center; font-size:0.85rem; color:#6b7280;">
     <div style="font-weight:500; color:#374151;">
       Data Analytics · Business Intelligence
     </div>
-    <div>
-      © 2026 Anita Simpson
-    </div>
+    <div>© 2026 Anita Simpson</div>
   </div>
 </footer>
+
+</body>
 </html>
