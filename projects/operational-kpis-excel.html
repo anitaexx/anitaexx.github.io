@@ -103,42 +103,46 @@
 
 <div class="container">
 
-  <h1>Header 1</h1>
+  <h1>Serivce and Sales Order Data Analyis for Operational Excellence</h1>
   <div class="meta">
     Excel · KPIs · Dashboard · Pivot Tables · Advanced Formulas
   </div>
 
-  <!-- VIDEO -->
-  <div class="video">
-    <iframe
-      src="https://www.youtube.com/embed/ymvC_pGCSZY"
-      title="Utility Billing Project Walkthrough"
-      allowfullscreen>
-    </iframe>
-  </div>
-
   <h2>Project Overview</h2>
   <p>
-    Type here
+    This project analyzes service reliability and operational performance by linking repair history with sales order data in Excel. 
+    It identifies recurring defects, evaluates order fulfillment efficiency, and highlights the financial impact of repair-driven 
+    demand through an executive dashboard designed for leadership visibility.
   </p>
 
 <h2>Data Model</h2>
-<p>This project uses a <strong>star schema</strong> in Microsoft SQL Server to organize utility data.</p>
-
+<p>This project has two datasets (tables) <strong>Repair History 2024/25</strong> and <strong>Sales Orders 2024/25</strong>.</p>
+<p>There are four sheet supporting this analysis </p>
+  
   <ul>
-  <li>DimCustomers</li>
-  <li>DimAccounts</li>
-  <li>DimTransactionType</li>
-  <li>DimDate</li>
-  <li>FactUsage (Fact Table)</li>
+  <li>Repair History KPIs</li>
+  <li>Sales Orders KPIs</li>
+  <li>Dashboard</li>
+  <li>Device Level Analysis</li>
   </ul>
 
+  <div class="visual">
+  <img src="../assets/images/allsheets.png" alt="Star Schema Diagram">
+</div>
+  
+<p>Helper columns for Repair History 2024/25, created with advanced formulas.</p
+
 <div class="visual">
-  <img src="../assets/images/star-schema-screengrab.png" alt="Star Schema Diagram">
+  <img src="../assets/images/helpercols.png" alt="Star Schema Diagram">
 </div>
 
+  <p>Linked the two tables with Service Call Number (SC000000) and included helper columns for Sales Orders 2024/25, created with advanced formulas.</p
+                                                                                              
+  <div class="visual">
+  <img src="../assets/images/linked-helpcols.png" alt="Star Schema Diagram">
+</div>
 
-  <h2>Key Business Questions & Analysis</h2>
+  <h2>Key Repair History KPIs</h2>
 
   <div class="business-question">
     <strong>1. Data Inconsistencies:</strong>  
