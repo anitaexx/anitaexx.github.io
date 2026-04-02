@@ -139,42 +139,48 @@
   <p>Linked the two tables with Service Call Number (SC000000) and included helper columns for Sales Orders 2024/25, created with advanced formulas.</p
                                                                                               
   <div class="visual">
-  <img src="../assets/images/linked-helpcols.png" alt="Star Schema Diagram">
+  <img src="../assets/images/linked-helpercols.png" alt="Star Schema Diagram">
 </div>
 
   <h2>Key Repair History KPIs</h2>
 
   <div class="business-question">
-    <strong>1. Data Inconsistencies:</strong>  
-    Flag customers marked as Residential in DimCustomer but whose accounts are Commercial or Small Commercial in DimAccount.
+    <strong>1. Total Service Calls per Quarter:</strong>  
+    This company sells devices and handpieces. 
+    When a customer or client calls to report an issue with a device, the technical support representative 
+    determines the nature of the problem and creates a service call.
   </div>
   <div class="visual">
-    <img src="../assets/images/data-inconsistency.png" alt="Customer Account Mismatch">
+    <img src="../assets/images/callvolume.png" alt="Customer Account Mismatch">
   </div>
 
   <div class="business-question">
-    <strong>2. Inactive Accounts With Recent Activity:</strong>  
-    Identify accounts marked as AccountStatus = 'Inactive' but still showing usage transactions.
-  </div>
+    <strong>2. Total Service Calls by Malfunction:</strong>  
+This company sells devices and handpieces. Whenever a service call is created, the technical support representative
+determines the exact malfunction and records it in the ERP system by selecting it from a predefined list.</div>
   <div class="visual">
-    <img src="../assets/images/inactive-usage.png" alt="Inactive Accounts with Usage">
+    <img src="../assets/images/mallcallvolume.png" alt="Inactive Accounts with Usage">
   </div>
 
   <div class="business-question">
-    <strong>3. Same Customer, Multiple Accounts:</strong>  
-    Find Residential Customers who have multiple accounts under their CutomerID.
-   </div>
+    <strong>3. Individual KPIs and Quality Audit:</strong>  
+    Here, the Operations Manager can determine who is creating the most service calls (the names have been blanked, as this is real data with real names). 
+    The Operations Manager can also see the quality of the calls being created. In this screenshot, we see that there are <strong>984/2001</strong>
+    service calls where the technical team have not described the repairs they have carried out. </div>
   <div class="visual">
-    <img src="../assets/images/multiple-accounts-flag.png" alt="Multiple Accounts Flag">
+    <img src="../assets/images/opskpis.png" alt="Multiple Accounts Flag">
   </div>
 
   <div class="business-question">
-    <strong>4. Refund Abuse:</strong>  
-    Identify customers where total Refund amount exceeds total Payments, and vizualize Total Payments Vs Refund monthly.  
-    Detect cases where a Refund was issued without any Payments, this is fraud.
+    <strong>3. % of Total Service Calls by Repair Category:</strong>  
+  Repair Category is a helper column. There is a screenshot below to show this.
+  Th second screenshot highlights the risk of improper data entry, as nearly 50% of the repairs are undocumented.
   </div>
   <div class="visual">
-    <img src="../assets/images/refund-audit.png" alt="Refund Abuse Analysis">
+    <img src="../assets/images/helperrc.png" alt="Refund Abuse Analysis">
+  </div>
+   <div class="visual">
+    <img src="../assets/images/50undocrepairs.png" alt="Refund Abuse Analysis">
   </div>
 
   <div class="business-question">
