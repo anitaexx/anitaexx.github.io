@@ -1,1 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Operations Command Center</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #ffffff;
+      color: #111827;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+    h1 {
+      font-size: 1.9rem;
+      margin-bottom: 8px;
+    }
+    .meta {
+      color: #4b5563;
+      font-size: 0.95rem;
+      margin-bottom: 30px;
+    }
+    h2 {
+      margin-top: 50px;
+      font-size: 1.3rem;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 6px;
+    }
+    .video {
+      aspect-ratio: 16 / 9;
+      margin-bottom: 40px;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      border: none;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .section-box {
+      background: #f3f4f6;
+      padding: 16px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 0.95rem;
+    }
+    .note {
+      font-size: 0.92rem;
+      color: #6b7280;
+      margin-top: 8px;
+    }
+    code.inline {
+      background: #f3f4f6;
+      padding: 2px 6px;
+      border-radius: 6px;
+      font-size: 0.92rem;
+    }
+  </style>
+</head>
+<header style="background:#f9fafb;border-bottom:1px solid #e5e7eb;">
+  <div style="max-width:1100px;margin:auto;padding:18px 20px;display:flex;justify-content:space-between;align-items:center;">
+    <div style="font-weight:700;font-size:1.1rem;">
+      <a href="../index.html" style="text-decoration:none;color:#111827;"></a>
+    </div>
+    <nav style="display:flex;gap:28px;font-size:0.95rem;">
+      <a href="../index.html" style="text-decoration:none;color:#374151;">Home</a>
+      <a href="../certifications.html" style="text-decoration:none;color:#374151;">Certifications</a>
+    </nav>
+  </div>
+</header>
+<body>
+  <div class="container">
+    <h1>AI Operations Command Center</h1>
+    <div class="meta">OpenAI · Make · Airtable · Gmail · Workflow Automation</div>
+
+    <div class="video">
+      <iframe
+        src="https://www.youtube.com/embed/I2ZRWUwq8A0"
+        title="AI Operations Command Center Walkthrough"
+        allowfullscreen>
+      </iframe>
+    </div>
+   
+    <h2>Project Overview</h2>
+    <p>
+      Built an AI-powered operations system using OpenAI that classifies issues, tracks execution in Airtable,
+      and sends intelligent follow-ups on overdue work via Gmail. The system turns operational inputs into
+      structured records, applies deadline logic, and supports accountability through automated reminders.
+    </p>
+
+    <h2>Workflow</h2>
+    <div class="section-box">
+      Airtable → Make → OpenAI → JSON Parsing → Airtable Update → Gmail Follow-Up
+    </div>
+
+    <h2>What the System Does</h2>
+    <ul>
+      <li>Captures operational issues in Airtable and enriches them with AI-generated classifications and summaries.</li>
+      <li>Uses OpenAI to assign type, priority, owner suggestions, and recommended actions.</li>
+      <li>Applies logic in Make to populate deadlines and maintain consistent system fields.</li>
+      <li>Sends follow-up reminders on overdue work and updates reminder history for tracking.</li>
+    </ul>
+
+    <h2>Why I Built It</h2>
+    <p>
+      Execution often breaks when teams have no reliable way to track issues, define ownership, and close loops.
+      I built this system to show how AI and automation can create a lightweight operations layer that improves
+      visibility, accountability, and follow-through.
+    </p>
+
+    <h2>Key Outcome</h2>
+    <p>
+      This project demonstrates how AI can be used beyond content generation by powering structured operational
+      workflows, execution tracking, and automated follow-up logic inside a real system.
+    </p>
+  </div>
+</body>
+<footer style="background:#f9fafb;border-top:1px solid #e5e7eb;margin-top:80px;">
+  <div style="max-width:1100px;margin:auto;padding:32px 20px;display:flex;flex-direction:column;gap:8px;text-align:center;font-size:0.85rem;color:#6b7280;">
+    <div style="font-weight:500;color:#374151;">AI Operations · Automation Systems</div>
+    <div>© 2026 Anita Simpson</div>
+  </div>
+</footer>
+</html>
 
