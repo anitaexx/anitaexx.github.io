@@ -1,1 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Local Knowledge Bot on SaaS Platform</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #ffffff;
+      color: #111827;
+      line-height: 1.7;
+    }
+    header {
+      background:#f9fafb;
+      border-bottom:1px solid #e5e7eb;
+    }
+    .header-inner {
+      max-width: 1100px;
+      margin: auto;
+      padding: 18px 20px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+    nav {
+      display:flex;
+      gap:28px;
+      font-size:0.95rem;
+    }
+    nav a, .brand a {
+      text-decoration:none;
+      color:#374151;
+    }
+    .brand {
+      font-weight:700;
+      font-size:1.1rem;
+    }
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px 70px;
+    }
+    h1 {
+      font-size: 2rem;
+      margin: 0 0 8px;
+    }
+    .meta {
+      color: #4b5563;
+      font-size: 0.95rem;
+      margin-bottom: 26px;
+    }
+    h2 {
+      margin-top: 46px;
+      margin-bottom: 12px;
+      font-size: 1.3rem;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 6px;
+    }
+    p {
+      margin: 0 0 16px;
+      font-size: 1rem;
+    }
+    ul {
+      margin: 0 0 18px 22px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    .workflow-line {
+      font-size: 1rem;
+      color:#374151;
+      margin: 6px 0 18px;
+    }
+    .step {
+      margin: 30px 0 42px;
+    }
+    .step h3 {
+      font-size: 1.08rem;
+      margin: 0 0 12px;
+    }
+    .shot {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 16px 0 18px;
+      border: 1px solid #e5e7eb;
+    }
+    .doc-link {
+      display:inline-block;
+      margin-top: 10px;
+      padding: 11px 16px;
+      background:#4338ca;
+      color:#ffffff;
+      text-decoration:none;
+      border-radius:8px;
+      font-weight:600;
+    }
+    .muted {
+      color:#6b7280;
+      font-size:0.94rem;
+    }
+    footer {
+      background:#f9fafb;
+      border-top:1px solid #e5e7eb;
+      margin-top:20px;
+    }
+    .footer-inner {
+      max-width:1100px;
+      margin:auto;
+      padding:32px 20px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+      text-align:center;
+      font-size:0.85rem;
+      color:#6b7280;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="brand"><a href="../index.html"></a></div>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="../certifications.html">Certifications</a>
+      </nav>
+    </div>
+  </header>
 
+  <div class="container">
+    <h1>Local Knowledge Bot on a SaaS Platform</h1>
+    <div class="meta">Technical Project Management · Conversational AI · Knowledge Design · Prompt Routing · SaaS Configuration</div>
+
+    <p>
+      I built a local knowledge bot inside a SaaS platform to answer questions from approved source material rather than from a broad open web context.
+      As the technical project manager, I structured the bot setup, added the knowledge source, selected the model provider, designed the routing flow,
+      and tested how the responses aligned with the source content.
+    </p>
+
+    <h2>Project Overview</h2>
+    <p>
+      This project demonstrates how I turn a use case into a working AI product setup. The goal was to create a chatbot that could stay grounded in a
+      specific document, respond clearly to end users, and support a controlled experience inside the platform. I wanted the final build to show both
+      product thinking and hands-on system configuration.
+    </p>
+
+    <h2>Workflow</h2>
+    <p class="workflow-line">Source Material → Model Provider Setup → Chatbot Configuration → Logic Flow Design → User Testing</p>
+
+    <h2>What the Bot Does</h2>
+    <ul>
+      <li>Uses uploaded source material as the approved knowledge base.</li>
+      <li>Answers user questions based on the selected document instead of relying on open-ended responses.</li>
+      <li>Routes prompts through a node-based flow that separates standard answers from quiz-related logic.</li>
+      <li>Supports testing so responses can be checked against the source material for accuracy and seriousness of tone.</li>
+    </ul>
+
+    <h2>Why I Built It</h2>
+    <p>
+      I wanted a portfolio project that shows how a project manager can contribute directly to AI delivery. This build highlights requirements translation,
+      knowledge governance, model selection, workflow design, and quality review. It also shows how I think about making an AI feature understandable to both
+      stakeholders and users.
+    </p>
+
+    <h2>Build Process</h2>
+
+    <div class="step">
+      <h3>1. Created the source material library</h3>
+      <p>
+        I first added the approved reference document into the platform so the bot had a defined knowledge boundary. In this case, the source was a malaria
+        information document summarizing causes, symptoms, high-risk groups, prevention, treatment, and public-health context.
+      </p>
+      <img src="assets/images/source-material.png" alt="Project screenshot" />
+    </div>
+
+    <div class="step">
+      <h3>2. Configured the team and model provider</h3>
+      <p>
+        Next, I set up the working environment and selected the language model provider for the chatbot. This step established the operational setup the bot
+        would use for response generation inside the SaaS platform.
+      </p>
+      <img src="assets/images/llm-used.png" alt="Project screenshot" />
+   </div>
+
+    <div class="step">
+      <h3>3. Created the chatbot instance</h3>
+      <p>
+        I then created the live chatbot entry, which served as the user-facing assistant. This made it possible to manage the bot as a specific product asset,
+        track activity, and continue refining the experience over time.
+      </p>
+      <img src="assets/images/bots.png" alt="Project screenshot" />
+   </div>
+
+    <div class="step">
+      <h3>4. Designed the routing and response flow</h3>
+      <p>
+        I mapped the logic with a node-based workflow. The structure routes incoming prompts either toward the main answer path or into quiz-related behavior,
+        making the build more flexible than a single prompt setup and easier to explain to non-technical stakeholders.
+      </p>
+      <img src="assets/images/bot-formation.png" alt="Project screenshot" />
+      </div>
+
+    <div class="step">
+      <h3>5. Tested the chatbot against the source</h3>
+      <p>
+        Finally, I tested the bot by asking grounded content questions and comparing the response with the source material. This helped confirm that the bot
+        could answer accurately, keep the seriousness of the topic intact, and stay aligned with the approved document.
+      </p>
+      <img src="assets/images/bot-test1.png alt="Project screenshot" />
+   </div>
+
+    <h2>Key Outcome</h2>
+    <p>
+      This project shows my ability to manage and configure an AI product from setup through testing. It demonstrates practical work across chatbot design,
+      source control, model configuration, flow logic, and validation in a real SaaS environment.
+    </p>
+
+    <h2>More Details</h2>
+    <p>
+      Add your Google Doc link below for a deeper write-up, including bot performance notes, testing observations, and any future improvements.
+    </p>
+    <a class="doc-link" href="https://docs.google.com/document/d/1rIMd7xtiEVZ2IW1tH-j1sXWcGS1oBLfyxqTVG6ijHyk/edit?usp=sharing" target="_blank" rel="noopener noreferrer">View detailed project notes and bot performance</a>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div style="font-weight:500;color:#374151;">Conversational AI · Product Delivery · Knowledge-Based Bots</div>
+      <div>© 2026 Anita Eimiakhena</div>
+    </div>
+  </footer>
+</body>
+</html>
