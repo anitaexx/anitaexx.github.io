@@ -38,7 +38,7 @@
       font-size:1.1rem;
     }
     .container {
-      max-width: 1100px;
+      max-width: 900px;
       margin: auto;
       padding: 40px 20px 70px;
     }
@@ -81,11 +81,14 @@
       margin: 0 0 12px;
     }
     .shot {
-      width: 100%;
+      max-width: 900px;
       height: auto;
       display: block;
-      margin: 16px 0 18px;
+      margin: 16px auto 18px;
       border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(0,0,0,.08);
+      object-fit: contain;
     }
     .doc-link {
       display:inline-block;
@@ -132,7 +135,7 @@
 
   <div class="container">
     <h1>Maleria Q&A Bot on SaaS Platform</h1>
-    <div class="meta">Technical Project Management · Conversational AI · Knowledge Design · Prompt Routing · SaaS Configuration</div>
+    <div class="meta">Technical Project Management · Conversational AI · Knowledge Design · Prompt Writing · Bot Configuration</div>
 
     <p>
       I built a local knowledge bot inside a SaaS platform to answer questions from approved source material rather than from a broad open web context.
@@ -173,7 +176,7 @@
         I first added the approved reference document into the platform so the bot had a defined knowledge boundary. In this case, the source was a malaria
         information document summarizing causes, symptoms, high-risk groups, prevention, treatment, and public-health context.
       </p>
-      <img src="../assets/images/source-material.png" alt="Project screenshot" />
+      <img class="shot" src="../assets/images/source-material.png" alt="Project screenshot" />
     </div>
 
     <div class="step">
@@ -182,7 +185,7 @@
         Next, I set up the working environment and selected the language model provider for the chatbot. This step established the operational setup the bot
         would use for response generation inside the SaaS platform.
       </p>
-      <img src="../assets/images/llm-used.png" alt="Project screenshot" />
+      <img class="shot" src="../assets/images/llm-used.png" alt="Project screenshot" />
    </div>
 
     <div class="step">
@@ -191,7 +194,7 @@
         I then created the live chatbot entry, which served as the user-facing assistant. This made it possible to manage the bot as a specific product asset,
         track activity, and continue refining the experience over time.
       </p>
-      <img src="../assets/images/bots.png" alt="Project screenshot" />
+      <img class="shot" src="../assets/images/bots.png" alt="Project screenshot" />
    </div>
 
     <div class="step">
@@ -200,7 +203,7 @@
         I mapped the logic with a node-based workflow. The structure routes incoming prompts either toward the main answer path or into quiz-related behavior,
         making the build more flexible than a single prompt setup and easier to explain to non-technical stakeholders.
       </p>
-      <img src="../assets/images/bot-formation.png" alt="Project screenshot" />
+      <img class="shot" src="../assets/images/bot-formation.png" alt="Project screenshot" />
       </div>
 
     <div class="step">
@@ -209,7 +212,7 @@
         Finally, I tested the bot by asking grounded content questions and comparing the response with the source material. This helped confirm that the bot
         could answer accurately, keep the seriousness of the topic intact, and stay aligned with the approved document.
       </p>
-      <img src="../assets/images/bot-test1.png" alt="Project screenshot" />
+      <img class="shot" src="../assets/images/bot-test1.png" alt="Project screenshot" />
    </div>
 
     <h2>Key Outcome</h2>
