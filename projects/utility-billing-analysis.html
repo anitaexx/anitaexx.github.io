@@ -15,7 +15,7 @@
     }
 
     .container {
-      max-width: 1100px;
+      max-width: 900px;
       margin: auto;
       padding: 40px 20px;
     }
@@ -71,6 +71,19 @@
       margin-bottom: 20px;
       font-size: 0.95rem;
     }
+    
+    .shot {
+      width: 100%;
+      max-width: 900px;
+      height: auto;
+      display: block;
+      margin: 16px auto 18px;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(0,0,0,.08);
+      object-fit: contain;
+    }
+    
   </style>
 </head>
 <header style="
@@ -136,7 +149,7 @@
   </ul>
 
 <div class="visual">
-  <img src="../assets/images/star-schema-screengrab.png" alt="Star Schema Diagram">
+  <img class="shot" src="../assets/images/star-schema-screengrab.png" alt="Star Schema Diagram">
 </div>
 
 
@@ -147,7 +160,7 @@
     Flag customers marked as Residential in DimCustomer but whose accounts are Commercial or Small Commercial in DimAccount.
   </div>
   <div class="visual">
-    <img src="../assets/images/data-inconsistency.png" alt="Customer Account Mismatch">
+    <img class="shot" src="../assets/images/data-inconsistency.png" alt="Customer Account Mismatch">
   </div>
 
   <div class="business-question">
@@ -155,7 +168,7 @@
     Identify accounts marked as AccountStatus = 'Inactive' but still showing usage transactions.
   </div>
   <div class="visual">
-    <img src="../assets/images/inactive-usage.png" alt="Inactive Accounts with Usage">
+    <img class="shot" src="../assets/images/inactive-usage.png" alt="Inactive Accounts with Usage">
   </div>
 
   <div class="business-question">
@@ -163,7 +176,7 @@
     Find Residential Customers who have multiple accounts under their CutomerID.
    </div>
   <div class="visual">
-    <img src="../assets/images/multiple-accounts-flag.png" alt="Multiple Accounts Flag">
+    <img class="shot" src="../assets/images/multiple-accounts-flag.png" alt="Multiple Accounts Flag">
   </div>
 
   <div class="business-question">
@@ -172,7 +185,7 @@
     Detect cases where a Refund was issued without any Payments, this is fraud.
   </div>
   <div class="visual">
-    <img src="../assets/images/refund-audit.png" alt="Refund Abuse Analysis">
+    <img class="shot" src="../assets/images/refund-audit.png" alt="Refund Abuse Analysis">
   </div>
 
   <div class="business-question">
@@ -180,7 +193,7 @@
     Identify Critical Care Residential customers who were ever charged a Late Fee (should ideally have no service interruptions).
   </div>
     <div class="visual">
-    <img src="../assets/images/late-fee-to-waive.png" alt="Refund Abuse Analysis">
+    <img class="shot" src="../assets/images/late-fee-to-waive.png" alt="Refund Abuse Analysis">
   </div>
 
     <div class="business-question">
@@ -188,7 +201,7 @@
     First we calculate transactions (payments and refunds), variance = late fees
   </div>
     <div class="visual">
-    <img src="../assets/images/dax-snippett-1.png" alt="Refund Abuse Analysis">
+    <img class="shot" src="../assets/images/dax-snippett-1.png" alt="Refund Abuse Analysis">
   </div>
 
     <div class="business-question">
@@ -196,7 +209,7 @@
     Identify Critical Care Residential customers who were ever charged a Late Fee (should ideally have no service interruptions).
   </div>
     <div class="visual">
-    <img src="../assets/images/dax-snippett-2.png" alt="Refund Abuse Analysis">
+    <img class="shot" src="../assets/images/dax-snippett-2.png" alt="Refund Abuse Analysis">
   </div>
 
   <div class="business-question">
