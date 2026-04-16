@@ -1,1 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AML / Transaction Monitoring Dashboard</title>
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#111827;
+      --muted:#4b5563;
+      --line:#e5e7eb;
+      --soft:#f9fafb;
+      --panel:#f3f4f6;
+      --accent:#111827;
+    }
 
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+
+    header{
+      background:var(--soft);
+      border-bottom:1px solid var(--line);
+    }
+
+    .topbar{
+      max-width:1100px;
+      margin:auto;
+      padding:18px 20px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
+    }
+
+    .brand{
+      font-weight:700;
+      font-size:1.1rem;
+    }
+
+    nav{
+      display:flex;
+      gap:28px;
+      font-size:.95rem;
+    }
+
+    nav a, .brand a{
+      color:#374151;
+      text-decoration:none;
+    }
+
+    .container{
+      max-width:1100px;
+      margin:auto;
+      padding:40px 20px;
+    }
+
+    h1{
+      font-size:1.95rem;
+      margin:0 0 8px;
+    }
+
+    .meta{
+      color:var(--muted);
+      font-size:.95rem;
+      margin-bottom:28px;
+    }
+
+    .intro{
+      background:var(--soft);
+      border:1px solid var(--line);
+      border-radius:12px;
+      padding:18px 20px;
+      margin-bottom:36px;
+    }
+
+    h2{
+      margin-top:48px;
+      margin-bottom:14px;
+      font-size:1.3rem;
+      border-bottom:2px solid var(--line);
+      padding-bottom:6px;
+    }
+
+    .visual{
+      margin:22px 0 34px;
+    }
+
+    .visual img{
+      width:100%;
+      display:block;
+      border-radius:12px;
+      box-shadow:0 4px 14px rgba(0,0,0,.08);
+      border:1px solid var(--line);
+    }
+
+    .caption{
+      color:var(--muted);
+      font-size:.93rem;
+      margin-top:10px;
+    }
+
+    .card{
+      background:var(--panel);
+      border-radius:10px;
+      padding:16px 18px;
+      margin:16px 0;
+      border:1px solid #e6e6e6;
+    }
+
+    ul{
+      padding-left:20px;
+      margin-top:8px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+      gap:16px;
+      margin-top:18px;
+    }
+
+    .mini{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:10px;
+      padding:16px;
+    }
+
+    footer{
+      background:var(--soft);
+      border-top:1px solid var(--line);
+      margin-top:80px;
+    }
+
+    .footer-wrap{
+      max-width:1100px;
+      margin:auto;
+      padding:32px 20px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+      text-align:center;
+      font-size:.85rem;
+      color:#6b7280;
+    }
+
+    .footer-wrap strong{
+      color:#374151;
+    }
+
+    .animated-dots span {
+      display: inline-block;
+      animation: bounceDots 1.4s infinite;
+      opacity: 0.25;
+    }
+    
+    .animated-dots span:nth-child(1) {
+      animation-delay: 0s;
+    }
+    
+    .animated-dots span:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+    
+    .animated-dots span:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+    
+    @keyframes bounceDots {
+      0%, 80%, 100% {
+        opacity: 0.25;
+        transform: translateY(0);
+      }
+      40% {
+        opacity: 1;
+        transform: translateY(-4px);
+      }
+}
+
+
+    
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="topbar">
+    <div class="brand"></div>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../certifications.html">Certifications</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+
+<h1 class="building">
+  Building
+  <span class="animated-dots">
+    <span>.</span>
+    <span>.</span>
+    <span>.</span>
+  </span>
+</h1>
+  <div class="meta">
+  </div>
